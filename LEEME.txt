@@ -1,28 +1,33 @@
-TALENTHUB - VERSIÓN 3
-=====================
+TALENTHUB V4.2 — ACTUALIZACIÓN DE INICIO
 
-CAMBIOS
-- Cada fila del roster abre una ficha individual con dirección #/empleado/EMP-XXXX.
-- Foto más grande y ampliable al pulsarla.
-- Posiciones editables con opciones de grupo, Instagram y TikTok.
-- Catálogo de áreas y campos Posición/Área en registros, Excel y exportaciones.
-- Motivo, fecha y detalles de baja se muestran solo si la persona está de baja.
-- Se conserva la detección de duplicados y el historial de vistos.
+CAMBIOS EN ESTA VERSIÓN
+* Izquierda: REGISTROS RECIENTES (igual que en V3).
+* Derecha: SEGUIMIENTO DE PTP. SOLO PTP que vencerán en los próximos 90 días (puedes seleccionar 30/60/90/365 días).
+* Debajo de esas DOS secciones: PRÓXIMOS CUMPLEAÑOS de personal activo (30/60/90 días o todo el año).
+* Click en TH / TalentHub devuelve a Inicio.
+* Datos de baja, importación de Excel, fichas y registros se mantienen.
 
-PARA ACTUALIZAR TU PÁGINA
-1. Abre la versión anterior desde tu navegador habitual.
-2. Ve a Configuración y descarga un respaldo JSON antes de cambiar nada.
-3. Sustituye tu index.html actual por el que está en esta carpeta.
-4. Si lo publicas en Netlify, sube la carpeta completa o su contenido con index.html en la raíz.
-5. Abre el sitio desde la MISMA dirección web y el MISMO navegador para conservar la base local.
-6. Si no aparecen los registros, importa el respaldo JSON desde Configuración.
+IMPORTANTE — TUS EMPLEADOS
+El navegador guarda los empleados fuera del archivo HTML. No elimines datos, cookies o historial de Chrome.
+ANTES DE ACTUALIZAR abre TalentHub y descarga un respaldo JSON en Configuración.
 
-EXCEL
-En Importar Excel carga .xlsx, .xlsm o .csv, selecciona columnas y revisa la vista previa.
-Los campos Grupo, Posición y Área se importan aunque sean nuevos.
-Los duplicados siguen sin incorporarse automáticamente; activa completar campos vacíos para enriquecer empleados existentes.
+EN TUS CAPTURAS SE OBSERVA QUE ABRES UN ARCHIVO LOCAL:
+.../Downloads/TalentHub_V3_Para_Publicar/index.html#/inicio
 
-IMPORTANTE
-El roster sigue guardándose localmente en el navegador (IndexedDB, con respaldo local alternativo).
-Publicar el HTML NO crea una base de datos compartida ni sincronización entre dispositivos.
-Haz copias de seguridad JSON y mantén los archivos en un lugar protegido.
+PARA CORREGIR ESA VERSIÓN LOCAL (LA QUE TIENE TUS REGISTROS):
+1. Descarga el ZIP y extráelo.
+2. Copia SOLO el index.html NUEVO.
+3. Abre en tu computadora la carpeta Downloads/TalentHub_V3_Para_Publicar.
+4. Haz una copia de seguridad del index.html anterior fuera de esa carpeta.
+5. Pega ahí el nuevo index.html y acepta REEMPLAZAR el anterior, manteniendo EXACTAMENTE ese nombre y esa ruta.
+6. Abre de nuevo el index.html dentro de Downloads/TalentHub_V3_Para_Publicar, NO la carpeta de descargas nueva.
+7. En Inicio comprueba que diga GESTIÓN DE TALENTO · V4.2.
+8. Los PTP antiguos/vencidos ya no aparecen en la lista futura; se indican por cantidad en un aviso debajo.
+9. Si no ves una persona, revisa que el estatus sea Activo y que tenga Fin de PTP / Fecha de nacimiento registrados.
+
+SI ADEMÁS USAS GITHUB / VERCEL:
+1. En el repositorio principal, reemplaza index.html en la raíz del repositorio.
+2. Espera al deployment correspondiente en Vercel y usa la misma URL que ya utilizabas.
+3. Recuerda: Chrome puede guardar datos diferentes en cada URL/origen. Por eso se recomienda el respaldo JSON.
+
+No hace falta borrar archivos LEEME ni CSV de tu repositorio. No hace falta Supabase para esta versión personal.
