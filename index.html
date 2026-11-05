@@ -67,6 +67,11 @@
     @media(max-width:420px){.profile-values{grid-template-columns:1fr}.profile-field.wide{grid-column:auto}}
 
     /* Inicio: PTP y cumpleaños en secciones independientes */
+    .data-status{font-size:12px;color:#6c7b8f;background:#f4f7fa;border-radius:10px;padding:11px 13px;line-height:1.6;margin:12px 1px 2px}
+    .data-status:empty{display:none}
+    .data-status strong{color:#344b63}
+    .data-status a{font-weight:800;white-space:nowrap}
+    
     .insights-stack{display:flex;flex-direction:column;gap:20px}
     .insights-panel{padding:23px 25px 20px;overflow:hidden}
     .insights-header{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--edge);flex-wrap:wrap}
@@ -144,12 +149,12 @@
     </aside>
     <div class="main">
       <header class="topbar">
-        <div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuButton" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button><div><div class="crumb">PANEL DE CONTROL</div><div class="subtitle" id="topSubtitle">Vista general del equipo</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuButton" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button><div><div class="crumb">PANEL DE CONTROL · TALENTHUB V4.1</div><div class="subtitle" id="topSubtitle">Vista general del equipo</div></div></div>
         <div class="top-actions"><span id="topDate" class="date-label"></span><button class="btn btn-primary" data-nav="nuevo"><svg><use href="#i-plus"/></svg><span>Nuevo registro</span></button></div>
       </header>
       <div class="content">
         <section id="view-inicio" class="view active" aria-label="Inicio">
-          <div class="hero"><div class="hero-content"><p class="hero-kicker">GESTIÓN DE TALENTO</p><h2>Tu equipo, bajo control.</h2><p>Encuentra a cualquier integrante, consulta su estatus y mantén su información al día, todo en un mismo lugar.</p><label class="visually-hidden" for="homeSearch">Buscar empleado por nombre, apellido o número</label><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="homeSearch" placeholder="Buscar por nombre, apellido o número de empleado..." autocomplete="off"></div></div><div class="hero-graphic" aria-hidden="true"><div class="fake-avatar">R</div><div class="fake-avatar">M</div><div class="fake-avatar">B</div></div></div>
+          <div class="hero"><div class="hero-content"><p class="hero-kicker">GESTIÓN DE TALENTO · V4.1</p><h2>Tu equipo, bajo control.</h2><p>Encuentra a cualquier integrante, consulta su estatus y mantén su información al día, todo en un mismo lugar.</p><label class="visually-hidden" for="homeSearch">Buscar empleado por nombre, apellido o número</label><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="homeSearch" placeholder="Buscar por nombre, apellido o número de empleado..." autocomplete="off"></div></div><div class="hero-graphic" aria-hidden="true"><div class="fake-avatar">R</div><div class="fake-avatar">M</div><div class="fake-avatar">B</div></div></div>
           <div class="stats-grid">
             <div class="card stat"><div class="stat-top"><div class="stat-label">Total registrados</div><div class="stat-icon"><svg><use href="#i-users"/></svg></div></div><div class="stat-number" id="statTotal">0</div><div class="stat-meta">Historial completo</div></div>
             <div class="card stat"><div class="stat-top"><div class="stat-label">Personal activo</div><div class="stat-icon green"><svg><use href="#i-check"/></svg></div></div><div class="stat-number" id="statActive">0</div><div class="stat-meta">Actualmente en proyecto</div></div>
@@ -161,11 +166,11 @@
               <div class="insights-header">
                 <div class="insights-heading">
                   <span class="insights-symbol gold" aria-hidden="true"><svg><use href="#i-clock"/></svg></span>
-                  <div><p class="insights-kicker">SEGUIMIENTO PRIORITARIO</p><h3 id="upcomingPtpTitle">PTP próximos a vencer</h3><p>Personal activo con PTP vencido o por terminar en los siguientes 30 días.</p></div>
+                  <div><p class="insights-kicker">SEGUIMIENTO PRIORITARIO</p><h3 id="upcomingPtpTitle">PTP próximos a vencer</h3><p>Consulta el vencimiento de los periodos de prueba de todo tu personal activo.</p></div>
                 </div>
-                <span class="insights-count" id="ptpListCount">0 pendientes</span>
+                <div class="insights-actions"><label for="ptpWindow">Mostrar</label><select id="ptpWindow" aria-label="Periodo para PTP"><option value="30">30 días</option><option value="60">60 días</option><option value="90" selected>90 días</option><option value="365">365 días</option></select><span class="insights-count" id="ptpListCount">0 pendientes</span></div>
               </div>
-              <div id="ptpEmployees" class="insights-list"></div>
+              <div id="ptpEmployees" class="insights-list"></div><p class="data-status" id="ptpMissingStatus"></p>
             </section>
             <section class="card insights-panel" aria-labelledby="upcomingBirthdayTitle">
               <div class="insights-header">
@@ -173,9 +178,9 @@
                   <span class="insights-symbol rose" aria-hidden="true"><svg><use href="#i-gift"/></svg></span>
                   <div><p class="insights-kicker">CALENDARIO DEL EQUIPO</p><h3 id="upcomingBirthdayTitle">Próximos cumpleaños</h3><p>Cumpleaños de colaboradores activos, incluidos los que caen al inicio del próximo año.</p></div>
                 </div>
-                <div class="insights-actions"><label for="birthdayWindow">Mostrar</label><select id="birthdayWindow" aria-label="Periodo para cumpleaños"><option value="7">7 días</option><option value="30" selected>30 días</option><option value="60">60 días</option><option value="90">90 días</option></select><span class="insights-count" id="birthdayListCount">0 cumpleaños</span></div>
+                <div class="insights-actions"><label for="birthdayWindow">Mostrar</label><select id="birthdayWindow" aria-label="Periodo para cumpleaños"><option value="7">7 días</option><option value="30">30 días</option><option value="60">60 días</option><option value="90">90 días</option><option value="365" selected>Todo el año</option></select><span class="insights-count" id="birthdayListCount">0 cumpleaños</span></div>
               </div>
-              <div id="birthdayEmployees" class="insights-list"></div>
+              <div id="birthdayEmployees" class="insights-list"></div><p class="data-status" id="birthdayMissingStatus"></p>
             </section>
             <section class="card section-card recent-panel"><div class="section-head"><h3 class="section-title">Registros recientes</h3><button class="inline-link" data-nav="roster">Ver roster completo →</button></div><div id="recentEmployees" class="recent-people"></div></section>
           </div>
@@ -357,13 +362,18 @@
     function attentionEmpty(message){return `<div class="insights-empty">${icon('calendar')}<span>${esc(message)}</span></div>`;}
     function formatUpcomingDate(d){return new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'short',timeZone:'UTC'}).format(d);}
     function renderDashboardLists(active,ptp){
+      const missingPTP=active.filter(e=>!e.ptpEnd).length;
+      const missingBirthdays=active.filter(e=>!e.birthDate).length;
+      const ptpDays=Number($('ptpWindow').value)||90;
+      $('ptpMissingStatus').innerHTML=missingPTP?`<strong>${missingPTP} ${missingPTP===1?'empleado activo no tiene':'empleados activos no tienen'} fecha de fin de PTP registrada.</strong> <a href="#/roster">Abrir roster y completar fechas</a>`:'Todos los empleados activos tienen su fecha de PTP registrada.';
+      $('birthdayMissingStatus').innerHTML=missingBirthdays?`<strong>${missingBirthdays} ${missingBirthdays===1?'empleado activo no tiene':'empleados activos no tienen'} fecha de nacimiento registrada.</strong> <a href="#/roster">Abrir roster y completar fechas</a>`:'Todos los empleados activos tienen fecha de nacimiento registrada.';
       $('ptpListCount').textContent=ptp.length===1?'1 seguimiento':`${ptp.length} seguimientos`;
       $('ptpEmployees').innerHTML=ptp.length?ptp.map(e=>{
         const days=daysUntil(e.ptpEnd);
         const className=days<0?'due':days===0?'today':days<=7?'soon':'normal';
         const label=days<0?`Vencido ${Math.abs(days)} d`:days===0?'Vence hoy':days===1?'Mañana':`En ${days} días`;
         return `<a class="insights-item" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.position||e.group||'Sin posición')} · ${esc(e.id)}</div></div><div class="insights-item-side"><span class="insights-item-date">${dateText(e.ptpEnd)}</span><span class="badge ${className}">${label}</span></div></a>`;
-      }).join(''):attentionEmpty('No hay PTP vencidos ni próximos a vencer en los siguientes 30 días.');
+      }).join(''):attentionEmpty(`No hay PTP vencidos ni programados en los próximos ${ptpDays} días. Si esperabas ver a alguien, revisa su fecha de «Fin de PTP» en su ficha.`);
       const selected=Number($('birthdayWindow').value)||30;
       const birthdays=birthdayOccurrences(active,selected);
       $('birthdayListCount').textContent=birthdays.length===1?'1 cumpleaños':`${birthdays.length} cumpleaños`;
@@ -376,11 +386,12 @@
     }
     function renderHome(){
       const active=app.employees.filter(e=>e.status==='Activo');
-      const ptp=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=30).sort((a,b)=>daysUntil(a.ptpEnd)-daysUntil(b.ptpEnd));
+      const ptpDays=Number($('ptpWindow').value)||90;
+      const ptp=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=ptpDays).sort((a,b)=>daysUntil(a.ptpEnd)-daysUntil(b.ptpEnd));
       $('statTotal').textContent=app.employees.length.toLocaleString('es-MX');
       $('statActive').textContent=active.length.toLocaleString('es-MX');
       $('statBajas').textContent=(app.employees.length-active.length).toLocaleString('es-MX');
-      $('statPTP').textContent=ptp.length.toLocaleString('es-MX');
+      $('statPTP').textContent=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=30).length.toLocaleString('es-MX');
       renderDashboardLists(active,ptp);
       const recent=[...app.employees].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).slice(0,6);
       $('recentEmployees').innerHTML=recent.length?recent.map(e=>`<a class="list-person person-record-link" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.id)} · ${esc(e.position||e.group||'Sin posición')} · ${dateText(e.admissionDate)}</div></div>${statusHTML(e.status)}${icon('arrow')}</a>`).join(''):emptyMarkup('Aún no hay empleados','Crea el primer registro para empezar a llevar el control.',true);
@@ -638,6 +649,7 @@ Las fichas existentes conservarán su posición histórica.`))return;const befor
       $('choosePhoto').addEventListener('click',()=>$('formPhotoInput').click());$('removePhoto').addEventListener('click',()=>{selectedPhoto='';updateFormPhoto();});$('formPhotoInput').addEventListener('change',e=>processPhoto(e.target.files?.[0]));
       $('homeSearch').addEventListener('input',e=>{rosterQuery=e.target.value;showView('roster');$('rosterSearch').focus();});
       $('birthdayWindow').addEventListener('change',renderHome);
+      $('ptpWindow').addEventListener('change',renderHome);
       $('rosterSearch').addEventListener('input',e=>{rosterQuery=e.target.value;renderRoster();});
       $('statusFilter').addEventListener('change',e=>{rosterStatus=e.target.value;renderRoster();});
       $('groupFilter').addEventListener('change',e=>{rosterGroup=e.target.value;renderRoster();});
