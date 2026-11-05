@@ -1,0 +1,22 @@
+TalentHub PERSONAL V4 — Nueva pantalla de inicio
+
+ESTA ES LA VERSIÓN RECOMENDADA PARA TU USO INDIVIDUAL, SIN SUPABASE.
+
+NOVEDADES EN INICIO
+1. PTP próximos a vencer: empleados activos cuyos PTP están vencidos o vencen en 30 días.
+   Muestra nombre, foto, fecha y días restantes; todos los registros de la lista abren su ficha.
+2. Próximos cumpleaños: empleados activos con cumpleaños en 7, 30, 60 o 90 días.
+   Por defecto se muestran 30 días, en orden cronológico.
+3. Registros recientes: al final del inicio.
+
+PARA ACTUALIZAR EN GITHUB + VERCEL
+1. Antes de reemplazar archivos, abre tu TalentHub actual con el MISMO navegador y URL, y descarga el respaldo JSON en Configuración.
+2. En tu repositorio GitHub sustituye el index.html anterior por este index.html.
+3. Guarda los cambios (Commit changes). Vercel publicará desde la rama vinculada.
+4. Vuelve a abrir tu sitio con la misma URL y el mismo navegador. Los registros locales deberían seguir disponibles.
+5. Si los registros no aparecen, recupera el respaldo en Configuración > Importar respaldo.
+
+SEGURIDAD
+La página NO comparte los datos ni requiere Supabase; sigue usando el almacenamiento de ese navegador/origen.
+No publiques respaldos JSON ni Excel con datos personales en GitHub.
+Haz respaldos periódicos. Para uso en equipo, existe un paquete separado de TalentHub Colaborativo con Supabase.
