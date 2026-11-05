@@ -1,19 +1,28 @@
-TALENTHUB PERSONAL V4.1 — PTP Y CUMPLEAÑOS VISIBLES
+TALENTHUB - VERSIÓN 3
+=====================
 
-ACTUALIZAR GITHUB + VERCEL:
-1. En el TalentHub actual, antes de modificar nada, descarga un respaldo JSON desde Configuración.
-2. Entra a GitHub y abre el repositorio conectado a Vercel.
-3. Abre index.html, pulsa el botón de edición y reemplaza su contenido con el de este index.html, o elimina el antiguo y carga el nuevo con el mismo nombre.
-4. Haz Commit changes en la rama de producción. Espera a que Vercel marque el despliegue como Ready.
-5. Entra a la misma dirección de TalentHub, actualiza la pestaña con Ctrl+F5 (Windows) o abre una pestaña nueva. Debe aparecer «GESTIÓN DE TALENTO · V4.1» en Inicio.
-6. Las secciones «PTP próximos a vencer» y «Próximos cumpleaños» deben ser visibles aunque no haya fechas.
+CAMBIOS
+- Cada fila del roster abre una ficha individual con dirección #/empleado/EMP-XXXX.
+- Foto más grande y ampliable al pulsarla.
+- Posiciones editables con opciones de grupo, Instagram y TikTok.
+- Catálogo de áreas y campos Posición/Área en registros, Excel y exportaciones.
+- Motivo, fecha y detalles de baja se muestran solo si la persona está de baja.
+- Se conserva la detección de duplicados y el historial de vistos.
 
-FUNCIONAMIENTO:
-- PTP: selector 30, 60, 90 (predeterminado) o 365 días. Incluye vencidos.
-- Cumpleaños: selector 7, 30, 60, 90 y todo el año (predeterminado).
-- Se cuentan solo empleados ACTIVOS. Las fichas sin fecha se señalan bajo cada panel.
-- Cuando no hay fechas, aparecen explicaciones, no desaparecen las secciones.
-- El resto de los empleados y fichas sigue en el almacenamiento local del mismo navegador y URL.
-- Publicar el archivo no carga datos personales a GitHub. No subas respaldos JSON al repositorio.
+PARA ACTUALIZAR TU PÁGINA
+1. Abre la versión anterior desde tu navegador habitual.
+2. Ve a Configuración y descarga un respaldo JSON antes de cambiar nada.
+3. Sustituye tu index.html actual por el que está en esta carpeta.
+4. Si lo publicas en Netlify, sube la carpeta completa o su contenido con index.html en la raíz.
+5. Abre el sitio desde la MISMA dirección web y el MISMO navegador para conservar la base local.
+6. Si no aparecen los registros, importa el respaldo JSON desde Configuración.
 
-Si ves una versión anterior, comprueba que hayas subido el index.html al repositorio correcto y que la compilación de Vercel haya terminado. Si la versión es V4.1 y los registros están vacíos, verifica fechas en las fichas.
+EXCEL
+En Importar Excel carga .xlsx, .xlsm o .csv, selecciona columnas y revisa la vista previa.
+Los campos Grupo, Posición y Área se importan aunque sean nuevos.
+Los duplicados siguen sin incorporarse automáticamente; activa completar campos vacíos para enriquecer empleados existentes.
+
+IMPORTANTE
+El roster sigue guardándose localmente en el navegador (IndexedDB, con respaldo local alternativo).
+Publicar el HTML NO crea una base de datos compartida ni sincronización entre dispositivos.
+Haz copias de seguridad JSON y mantén los archivos en un lugar protegido.

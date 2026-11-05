@@ -65,51 +65,6 @@
     @media(max-width:860px){.profile-panel-grid{grid-template-columns:1fr}.profile-panel.full{grid-column:auto}.profile-hero{gap:22px;padding:24px}.profile-photo-button .avatar{width:162px;height:180px}}
     @media(max-width:680px){.roster-head{display:none}.roster-row{grid-template-columns:1fr auto;padding:17px;gap:10px}.roster-row .employee-cell{grid-column:1/-1}.roster-row .cell-position{grid-column:1;grid-row:2}.roster-row .cell-status{grid-column:2;grid-row:2}.roster-row .profile-open{grid-column:2;grid-row:3}.roster-row .hide-mid,.roster-row .hide-small,.roster-row .hide-group-mobile{display:none}.profile-hero{flex-direction:column;align-items:flex-start;padding:19px;gap:18px;min-height:0}.profile-photo-button .avatar{width:158px;height:168px}.profile-hero-info h2{font-size:25px}.profile-panel{padding:19px}.profile-values{gap:20px 12px}.profile-action-row .btn{flex:1}}
     @media(max-width:420px){.profile-values{grid-template-columns:1fr}.profile-field.wide{grid-column:auto}}
-
-    /* Inicio: PTP y cumpleaños en secciones independientes */
-    .data-status{font-size:12px;color:#6c7b8f;background:#f4f7fa;border-radius:10px;padding:11px 13px;line-height:1.6;margin:12px 1px 2px}
-    .data-status:empty{display:none}
-    .data-status strong{color:#344b63}
-    .data-status a{font-weight:800;white-space:nowrap}
-    
-    .insights-stack{display:flex;flex-direction:column;gap:20px}
-    .insights-panel{padding:23px 25px 20px;overflow:hidden}
-    .insights-header{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--edge);flex-wrap:wrap}
-    .insights-heading{display:flex;gap:15px;align-items:center;min-width:0;flex:1}
-    .insights-heading>div{min-width:0}
-    .insights-heading h3{font-size:19px;letter-spacing:-.45px;line-height:1.2;margin:4px 0 5px}
-    .insights-heading p:not(.insights-kicker){font-size:12px;line-height:1.6;color:var(--muted);margin:0}
-    .insights-kicker{margin:0;color:var(--teal);font-size:10px;letter-spacing:1.6px;font-weight:850}
-    .insights-symbol{width:47px;height:47px;flex-shrink:0;border-radius:14px;display:grid;place-items:center}
-    .insights-symbol svg{height:23px;width:23px}
-    .insights-symbol.gold{background:#fff2da;color:#a5762b}
-    .insights-symbol.rose{background:#fff0f3;color:#c45379}
-    .insights-count{border-radius:100px;padding:8px 12px;background:#f2f6fa;color:#51677e;font-size:11px;font-weight:800;white-space:nowrap}
-    .insights-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-    .insights-actions label{font-size:11px;font-weight:700;color:var(--muted)}
-    .insights-actions select{background:#fff;border:1px solid #dbe3ed;border-radius:9px;padding:8px 10px;min-height:36px;font-size:12px;font-weight:750}
-    .insights-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;max-height:460px;overflow-y:auto;padding:17px 2px 2px}
-    .insights-item{display:flex;align-items:center;gap:12px;min-width:0;padding:14px;border:1px solid #e7edf3;border-radius:12px;background:#fff;text-decoration:none;color:inherit;transition:background .15s,border-color .15s}
-    .insights-item:hover,.insights-item:focus-visible{background:#f5fbfa;border-color:#a3d6cb;outline:none}
-    .insights-item .avatar{height:45px;width:45px;border-radius:13px}
-    .insights-item .person-detail{flex:1;min-width:0}
-    .insights-item .person-name{font-size:13px}
-    .insights-item .person-sub{font-size:11px;white-space:normal;line-height:1.45}
-    .insights-item-side{display:flex;flex-direction:column;gap:6px;align-items:flex-end;flex-shrink:0}
-    .insights-item-date{font-size:11px;font-weight:750;color:#66788d}
-    .insights-item .badge{font-size:10px}
-    .insights-item .badge.today{background:#e0f4ef;color:#08766a}
-    .insights-item .badge.soon{background:#fff0db;color:#97601d}
-    .insights-item .badge.due{background:#fff0f0;color:#b8424e}
-    .insights-item .badge.normal{background:#eef3f8;color:#5f7287}
-    .insights-empty{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:12px;min-height:96px;color:#77899d;text-align:center;font-size:12px;line-height:1.6}
-    .insights-empty svg{width:28px;height:28px;color:#b0c0cf}
-    .recent-panel{margin-top:2px}
-    .recent-people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
-    .recent-people .list-person:nth-last-child(2),.recent-people .list-person:last-child{border-bottom:0}
-    .recent-people .list-person>svg{width:17px;height:17px;flex:0 0 17px;color:#8395a9}
-    @media(max-width:850px){.insights-list{grid-template-columns:1fr}.recent-people{grid-template-columns:1fr}.recent-people .list-person:nth-last-child(2){border-bottom:1px solid #edf0f4}}
-    @media(max-width:680px){.insights-header{display:block}.insights-header>.insights-count{display:inline-block;margin-top:13px}.insights-actions{margin-top:13px;justify-content:flex-start}.insights-panel{padding:18px 16px}.insights-heading{gap:11px}.insights-heading h3{font-size:17px}.insights-symbol{width:40px;height:40px;border-radius:12px}.insights-symbol svg{width:20px;height:20px}.insights-header{align-items:flex-start}.insights-item{padding:12px 10px;gap:9px}.insights-item .avatar{width:39px;height:39px}.insights-item-date{font-size:10px}.insights-count{font-size:10px}}
   </style>
 </head>
 <body>
@@ -130,7 +85,6 @@
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l4 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 10v11M2 7h20v4H2zM12 7s-6-1-6-4a2 2 0 0 1 4-1c1 1 2 5 2 5Zm0 0s6-1 6-4a2 2 0 0 0-4-1c-1 1-2 5-2 5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   </svg>
   <div class="app">
@@ -149,42 +103,22 @@
     </aside>
     <div class="main">
       <header class="topbar">
-        <div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuButton" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button><div><div class="crumb">PANEL DE CONTROL · TALENTHUB V4.1</div><div class="subtitle" id="topSubtitle">Vista general del equipo</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><button class="icon-btn mobile-menu" id="menuButton" aria-label="Abrir menú"><svg><use href="#i-menu"/></svg></button><div><div class="crumb">PANEL DE CONTROL</div><div class="subtitle" id="topSubtitle">Vista general del equipo</div></div></div>
         <div class="top-actions"><span id="topDate" class="date-label"></span><button class="btn btn-primary" data-nav="nuevo"><svg><use href="#i-plus"/></svg><span>Nuevo registro</span></button></div>
       </header>
       <div class="content">
         <section id="view-inicio" class="view active" aria-label="Inicio">
-          <div class="hero"><div class="hero-content"><p class="hero-kicker">GESTIÓN DE TALENTO · V4.1</p><h2>Tu equipo, bajo control.</h2><p>Encuentra a cualquier integrante, consulta su estatus y mantén su información al día, todo en un mismo lugar.</p><label class="visually-hidden" for="homeSearch">Buscar empleado por nombre, apellido o número</label><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="homeSearch" placeholder="Buscar por nombre, apellido o número de empleado..." autocomplete="off"></div></div><div class="hero-graphic" aria-hidden="true"><div class="fake-avatar">R</div><div class="fake-avatar">M</div><div class="fake-avatar">B</div></div></div>
+          <div class="hero"><div class="hero-content"><p class="hero-kicker">GESTIÓN DE TALENTO</p><h2>Tu equipo, bajo control.</h2><p>Encuentra a cualquier integrante, consulta su estatus y mantén su información al día, todo en un mismo lugar.</p><label class="visually-hidden" for="homeSearch">Buscar empleado por nombre, apellido o número</label><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="homeSearch" placeholder="Buscar por nombre, apellido o número de empleado..." autocomplete="off"></div></div><div class="hero-graphic" aria-hidden="true"><div class="fake-avatar">R</div><div class="fake-avatar">M</div><div class="fake-avatar">B</div></div></div>
           <div class="stats-grid">
             <div class="card stat"><div class="stat-top"><div class="stat-label">Total registrados</div><div class="stat-icon"><svg><use href="#i-users"/></svg></div></div><div class="stat-number" id="statTotal">0</div><div class="stat-meta">Historial completo</div></div>
             <div class="card stat"><div class="stat-top"><div class="stat-label">Personal activo</div><div class="stat-icon green"><svg><use href="#i-check"/></svg></div></div><div class="stat-number" id="statActive">0</div><div class="stat-meta">Actualmente en proyecto</div></div>
             <div class="card stat"><div class="stat-top"><div class="stat-label">Bajas registradas</div><div class="stat-icon red"><svg><use href="#i-x"/></svg></div></div><div class="stat-number" id="statBajas">0</div><div class="stat-meta">Conservadas en el historial</div></div>
             <div class="card stat"><div class="stat-top"><div class="stat-label">PTP por revisar</div><div class="stat-icon gold"><svg><use href="#i-calendar"/></svg></div></div><div class="stat-number" id="statPTP">0</div><div class="stat-meta">Vencidos o próximos 30 días</div></div>
           </div>
-          <div class="insights-stack">
-            <section class="card insights-panel" aria-labelledby="upcomingPtpTitle">
-              <div class="insights-header">
-                <div class="insights-heading">
-                  <span class="insights-symbol gold" aria-hidden="true"><svg><use href="#i-clock"/></svg></span>
-                  <div><p class="insights-kicker">SEGUIMIENTO PRIORITARIO</p><h3 id="upcomingPtpTitle">PTP próximos a vencer</h3><p>Consulta el vencimiento de los periodos de prueba de todo tu personal activo.</p></div>
-                </div>
-                <div class="insights-actions"><label for="ptpWindow">Mostrar</label><select id="ptpWindow" aria-label="Periodo para PTP"><option value="30">30 días</option><option value="60">60 días</option><option value="90" selected>90 días</option><option value="365">365 días</option></select><span class="insights-count" id="ptpListCount">0 pendientes</span></div>
-              </div>
-              <div id="ptpEmployees" class="insights-list"></div><p class="data-status" id="ptpMissingStatus"></p>
-            </section>
-            <section class="card insights-panel" aria-labelledby="upcomingBirthdayTitle">
-              <div class="insights-header">
-                <div class="insights-heading">
-                  <span class="insights-symbol rose" aria-hidden="true"><svg><use href="#i-gift"/></svg></span>
-                  <div><p class="insights-kicker">CALENDARIO DEL EQUIPO</p><h3 id="upcomingBirthdayTitle">Próximos cumpleaños</h3><p>Cumpleaños de colaboradores activos, incluidos los que caen al inicio del próximo año.</p></div>
-                </div>
-                <div class="insights-actions"><label for="birthdayWindow">Mostrar</label><select id="birthdayWindow" aria-label="Periodo para cumpleaños"><option value="7">7 días</option><option value="30">30 días</option><option value="60">60 días</option><option value="90">90 días</option><option value="365" selected>Todo el año</option></select><span class="insights-count" id="birthdayListCount">0 cumpleaños</span></div>
-              </div>
-              <div id="birthdayEmployees" class="insights-list"></div><p class="data-status" id="birthdayMissingStatus"></p>
-            </section>
-            <section class="card section-card recent-panel"><div class="section-head"><h3 class="section-title">Registros recientes</h3><button class="inline-link" data-nav="roster">Ver roster completo →</button></div><div id="recentEmployees" class="recent-people"></div></section>
+          <div class="home-grid">
+            <section class="card section-card"><div class="section-head"><h3 class="section-title">Registros recientes</h3><button class="inline-link" data-nav="roster">Ver roster completo →</button></div><div id="recentEmployees"></div></section>
+            <section class="card section-card"><div class="section-head"><h3 class="section-title">Seguimiento de PTP</h3><span class="muted small">Próximos 30 días</span></div><div id="ptpEmployees"></div></section>
           </div>
-
         </section>
         <section id="view-roster" class="view" aria-label="Roster completo">
           <div class="page-heading"><div><p class="eyebrow">DIRECTORIO GENERAL</p><h1 class="page-title">Roster completo</h1><p class="page-desc">Consulta, filtra y actualiza todas las fichas de tu equipo.</p></div><button class="btn btn-primary" data-nav="nuevo"><svg><use href="#i-plus"/></svg><span>Agregar empleado</span></button></div>
@@ -325,7 +259,7 @@
       document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===`view-${section}`));
       document.querySelectorAll('.nav-button').forEach(b=>b.classList.toggle('active',b.dataset.nav===section));
       $('topSubtitle').textContent=({inicio:'Vista general del equipo',roster:'Directorio de empleados',configuracion:'Catálogos y respaldo',importar:'Excel y control de duplicados',perfil:'Ficha individual del personal'})[section];
-      if(section==='inicio')renderHome();if(section==='roster')renderRoster();if(section==='configuracion')renderSettings();if(section==='importar')renderSeenInfo();closeMobileMenu();window.scrollTo(0,0);
+      if(section==='roster')renderRoster();if(section==='configuracion')renderSettings();if(section==='importar')renderSeenInfo();closeMobileMenu();window.scrollTo(0,0);
     }
     function closeMobileMenu(){$('sidebar').classList.remove('open');$('screenOverlay').classList.remove('visible');}
     function allCatalogValues(type,cur=''){if(type==='positions')return [...new Set([...app.settings.positions.map(x=>x.name),...app.employees.map(e=>e.position),cur].map(text).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));return [...new Set([...app.settings[type],...app.employees.map(e=>type==='groups'?e.group:type==='areas'?e.area:type==='recruiters'?e.recruiter:e.exitReason),cur].map(text).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'));}
@@ -333,68 +267,12 @@
     function togglePositionFields(){const pos=positionConfig($('f-position').value);for(const [field,flag] of [['formGroupField','group'],['formInstagramField','instagram'],['formTikTokField','tiktok']]){const id={group:'f-group',instagram:'f-instagram',tiktok:'f-tiktok'}[flag];$(field).classList.toggle('hidden',!!pos&&!pos[flag]&&!text($(id).value));}}
     function populateSelect(id,type,selected='',label='Sin asignar') {const el=$(id);el.innerHTML=`<option value="">${esc(label)}</option>`+allCatalogValues(type,selected).map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');el.value=selected||'';}
     function refreshFilters(){const group=$('groupFilter'),rec=$('recruiterFilter');group.innerHTML='<option value="">Todos los grupos</option>'+allCatalogValues('groups').map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');rec.innerHTML='<option value="">Todos los reclutadores</option>'+allCatalogValues('recruiters').map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');if(allCatalogValues('groups').includes(rosterGroup))group.value=rosterGroup;else rosterGroup='';if(allCatalogValues('recruiters').includes(rosterRecruiter))rec.value=rosterRecruiter;else rosterRecruiter='';}
-    function birthdayOccurrences(records,daysWindow){
-      // Day-based UTC comparisons avoid local time and daylight-saving surprises.
-      const [nowYear,nowMonth,nowDay]=todayISO().split('-').map(Number);
-      const todayDay=Date.UTC(nowYear,nowMonth-1,nowDay);
-      const occurrence=(year,month,day)=>{
-        const out=new Date(Date.UTC(year,month-1,day));
-        // Feb 29 is shown on Feb 28 when the current year is not leap.
-        if(month===2&&day===29&&out.getUTCMonth()!==1)return new Date(Date.UTC(year,1,28));
-        if(out.getUTCFullYear()!==year||out.getUTCMonth()!==month-1||out.getUTCDate()!==day)return null;
-        return out;
-      };
-      const results=[];
-      for(const e of records){
-        const v=e.birthDate||'';
-        if(!/^\d{4}-\d{2}-\d{2}$/.test(v))continue;
-        const [birthYear,month,day]=v.split('-').map(Number);
-        if(birthYear<1900||birthYear>nowYear||!occurrence(birthYear,month,day))continue;
-        let next=occurrence(nowYear,month,day);
-        if(!next)continue;
-        if(next.getTime()<todayDay)next=occurrence(nowYear+1,month,day);
-        if(!next)continue;
-        const days=Math.round((next.getTime()-todayDay)/86400000);
-        if(days>=0&&days<=daysWindow)results.push({employee:e,days,upcoming:next,age:next.getUTCFullYear()-birthYear});
-      }
-      return results.sort((a,b)=>a.days-b.days||a.employee.name.localeCompare(b.employee.name,'es'));
-    }
-    function attentionEmpty(message){return `<div class="insights-empty">${icon('calendar')}<span>${esc(message)}</span></div>`;}
-    function formatUpcomingDate(d){return new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'short',timeZone:'UTC'}).format(d);}
-    function renderDashboardLists(active,ptp){
-      const missingPTP=active.filter(e=>!e.ptpEnd).length;
-      const missingBirthdays=active.filter(e=>!e.birthDate).length;
-      const ptpDays=Number($('ptpWindow').value)||90;
-      $('ptpMissingStatus').innerHTML=missingPTP?`<strong>${missingPTP} ${missingPTP===1?'empleado activo no tiene':'empleados activos no tienen'} fecha de fin de PTP registrada.</strong> <a href="#/roster">Abrir roster y completar fechas</a>`:'Todos los empleados activos tienen su fecha de PTP registrada.';
-      $('birthdayMissingStatus').innerHTML=missingBirthdays?`<strong>${missingBirthdays} ${missingBirthdays===1?'empleado activo no tiene':'empleados activos no tienen'} fecha de nacimiento registrada.</strong> <a href="#/roster">Abrir roster y completar fechas</a>`:'Todos los empleados activos tienen fecha de nacimiento registrada.';
-      $('ptpListCount').textContent=ptp.length===1?'1 seguimiento':`${ptp.length} seguimientos`;
-      $('ptpEmployees').innerHTML=ptp.length?ptp.map(e=>{
-        const days=daysUntil(e.ptpEnd);
-        const className=days<0?'due':days===0?'today':days<=7?'soon':'normal';
-        const label=days<0?`Vencido ${Math.abs(days)} d`:days===0?'Vence hoy':days===1?'Mañana':`En ${days} días`;
-        return `<a class="insights-item" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.position||e.group||'Sin posición')} · ${esc(e.id)}</div></div><div class="insights-item-side"><span class="insights-item-date">${dateText(e.ptpEnd)}</span><span class="badge ${className}">${label}</span></div></a>`;
-      }).join(''):attentionEmpty(`No hay PTP vencidos ni programados en los próximos ${ptpDays} días. Si esperabas ver a alguien, revisa su fecha de «Fin de PTP» en su ficha.`);
-      const selected=Number($('birthdayWindow').value)||30;
-      const birthdays=birthdayOccurrences(active,selected);
-      $('birthdayListCount').textContent=birthdays.length===1?'1 cumpleaños':`${birthdays.length} cumpleaños`;
-      $('birthdayEmployees').innerHTML=birthdays.length?birthdays.map(({employee:e,days,upcoming,age})=>{
-        const label=days===0?'¡Hoy!':days===1?'Mañana':`En ${days} días`;
-        const mood=days===0?'today':days<=7?'soon':'normal';
-        const yearLabel=Number.isFinite(age)&&age>0?` · Cumple ${age} años`:'';
-        return `<a class="insights-item" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.position||e.group||'Sin posición')}${yearLabel}</div></div><div class="insights-item-side"><span class="insights-item-date">${formatUpcomingDate(upcoming)}</span><span class="badge ${mood}">${label}</span></div></a>`;
-      }).join(''):attentionEmpty(`No hay cumpleaños de personal activo en los próximos ${selected} días.`);
-    }
     function renderHome(){
-      const active=app.employees.filter(e=>e.status==='Activo');
-      const ptpDays=Number($('ptpWindow').value)||90;
-      const ptp=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=ptpDays).sort((a,b)=>daysUntil(a.ptpEnd)-daysUntil(b.ptpEnd));
-      $('statTotal').textContent=app.employees.length.toLocaleString('es-MX');
-      $('statActive').textContent=active.length.toLocaleString('es-MX');
-      $('statBajas').textContent=(app.employees.length-active.length).toLocaleString('es-MX');
-      $('statPTP').textContent=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=30).length.toLocaleString('es-MX');
-      renderDashboardLists(active,ptp);
+      const active=app.employees.filter(e=>e.status==='Activo');const ptp=active.filter(e=>e.ptpEnd&&daysUntil(e.ptpEnd)<=30).sort((a,b)=>daysUntil(a.ptpEnd)-daysUntil(b.ptpEnd));
+      $('statTotal').textContent=app.employees.length.toLocaleString('es-MX');$('statActive').textContent=active.length.toLocaleString('es-MX');$('statBajas').textContent=(app.employees.length-active.length).toLocaleString('es-MX');$('statPTP').textContent=ptp.length.toLocaleString('es-MX');
       const recent=[...app.employees].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||'')).slice(0,6);
       $('recentEmployees').innerHTML=recent.length?recent.map(e=>`<a class="list-person person-record-link" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.id)} · ${esc(e.position||e.group||'Sin posición')} · ${dateText(e.admissionDate)}</div></div>${statusHTML(e.status)}${icon('arrow')}</a>`).join(''):emptyMarkup('Aún no hay empleados','Crea el primer registro para empezar a llevar el control.',true);
+      $('ptpEmployees').innerHTML=ptp.length?ptp.slice(0,7).map(e=>{const days=daysUntil(e.ptpEnd);const badge=days<0?`<span class="badge exit">Vencido hace ${Math.abs(days)} d</span>`:days===0?'<span class="badge gold">Hoy</span>':`<span class="badge gold">${days} d</span>`;return `<a class="list-person person-record-link" href="#/empleado/${encodeURIComponent(e.id)}">${avatarHTML(e)}<div class="person-detail"><div class="person-name">${esc(e.name)}</div><div class="person-sub">${esc(e.id)} · Fin de PTP: ${dateText(e.ptpEnd)}</div></div>${badge}${icon('arrow')}</a>`;}).join(''):emptyMarkup('Sin PTP por revisar','No hay fechas de PTP vencidas ni próximas a 30 días.');
     }
     function emptyMarkup(title,subtitle,add=false){return `<div class="empty">${icon('users')}<h3>${esc(title)}</h3><p>${esc(subtitle)}</p>${add?`<button class="btn btn-primary btn-sm" data-nav="nuevo">${icon('plus')} Crear registro</button>`:''}</div>`;}
     function renderRoster(){refreshFilters();$('rosterSearch').value=rosterQuery;$('statusFilter').value=rosterStatus;
@@ -648,8 +526,6 @@ Las fichas existentes conservarán su posición histórica.`))return;const befor
       $('f-name').addEventListener('input',()=>{if(!selectedPhoto)updateFormPhoto();});
       $('choosePhoto').addEventListener('click',()=>$('formPhotoInput').click());$('removePhoto').addEventListener('click',()=>{selectedPhoto='';updateFormPhoto();});$('formPhotoInput').addEventListener('change',e=>processPhoto(e.target.files?.[0]));
       $('homeSearch').addEventListener('input',e=>{rosterQuery=e.target.value;showView('roster');$('rosterSearch').focus();});
-      $('birthdayWindow').addEventListener('change',renderHome);
-      $('ptpWindow').addEventListener('change',renderHome);
       $('rosterSearch').addEventListener('input',e=>{rosterQuery=e.target.value;renderRoster();});
       $('statusFilter').addEventListener('change',e=>{rosterStatus=e.target.value;renderRoster();});
       $('groupFilter').addEventListener('change',e=>{rosterGroup=e.target.value;renderRoster();});
