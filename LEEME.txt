@@ -1,0 +1,28 @@
+TALENTHUB - VERSIÓN 3
+=====================
+
+CAMBIOS
+- Cada fila del roster abre una ficha individual con dirección #/empleado/EMP-XXXX.
+- Foto más grande y ampliable al pulsarla.
+- Posiciones editables con opciones de grupo, Instagram y TikTok.
+- Catálogo de áreas y campos Posición/Área en registros, Excel y exportaciones.
+- Motivo, fecha y detalles de baja se muestran solo si la persona está de baja.
+- Se conserva la detección de duplicados y el historial de vistos.
+
+PARA ACTUALIZAR TU PÁGINA
+1. Abre la versión anterior desde tu navegador habitual.
+2. Ve a Configuración y descarga un respaldo JSON antes de cambiar nada.
+3. Sustituye tu index.html actual por el que está en esta carpeta.
+4. Si lo publicas en Netlify, sube la carpeta completa o su contenido con index.html en la raíz.
+5. Abre el sitio desde la MISMA dirección web y el MISMO navegador para conservar la base local.
+6. Si no aparecen los registros, importa el respaldo JSON desde Configuración.
+
+EXCEL
+En Importar Excel carga .xlsx, .xlsm o .csv, selecciona columnas y revisa la vista previa.
+Los campos Grupo, Posición y Área se importan aunque sean nuevos.
+Los duplicados siguen sin incorporarse automáticamente; activa completar campos vacíos para enriquecer empleados existentes.
+
+IMPORTANTE
+El roster sigue guardándose localmente en el navegador (IndexedDB, con respaldo local alternativo).
+Publicar el HTML NO crea una base de datos compartida ni sincronización entre dispositivos.
+Haz copias de seguridad JSON y mantén los archivos en un lugar protegido.
